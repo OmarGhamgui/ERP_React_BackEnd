@@ -2,7 +2,6 @@ import { CreateQuery } from "mongoose";
 import { Client, IClient } from "../models/Client";
 
 export class ClientDA {
-  StudentDA() {}
 
   public async createClient({
     name,

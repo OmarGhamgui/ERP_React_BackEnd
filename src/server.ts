@@ -3,8 +3,11 @@ import { ClientDA } from './DA/ClientDA';
 const connectDb = require("./DBConnection");
 var cors = require('cors')
 
-import { ClientController } from './controllers/ClientController';
-import { ClientRouter } from './routes/ClientRoute';
+import { ArticleController, ClientController,SupplierController } from './controllers';
+import { ClientRouter,SupplierRouter } from './routes';
+import { SupplierDA } from './DA/SupplierDA';
+import { ArticleRouter } from './routes/ArticleRoute';
+import { ArticleDA } from './DA/ArticleDA';
 
 require('dotenv').config()
 
@@ -21,6 +24,10 @@ app.use('/', router);
 
 
 ClientRouter(router, new ClientController(new ClientDA()));
+SupplierRouter(router, new SupplierController(new SupplierDA()));
+ArticleRouter(router, new ArticleController(new ArticleDA()));
+
+
 
 
 const PORT = process.env.PORT || 5000;

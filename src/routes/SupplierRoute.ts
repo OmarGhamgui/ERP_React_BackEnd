@@ -1,15 +1,16 @@
 import { Router, Response, Request } from "express";
-import { ClientController } from './../controllers/ClientController';
+import { SupplierController } from './../controllers/SupplierController';
 
-export const ClientRouter = (
+export const SupplierRouter = (
   router: Router,
-  service: ClientController
+  service: SupplierController
 ): void => {
 
-  router.post("/clients", async (req: Request, res: Response) => {
+  router.post("/suppliers", async (req: Request, res: Response) => {
     try {
-      const result = await service.createClient({
+      const result = await service.createSupplier({
         name: req.body.name,
+        email:req.body.email,
         phone: req.body.phone,
         address: req.body.address,
       });
@@ -22,9 +23,9 @@ export const ClientRouter = (
     }
   });
 
-  router.get("/clients", async (req:Request,res:Response) => {
+  router.get("/suppliers", async (req:Request,res:Response) => {
     try {
-      const result = await service.getClients()
+      const result = await service.getSuppliers()
       res.status(200).send(result);
     } catch (err) {
       console.log(err);
@@ -32,10 +33,10 @@ export const ClientRouter = (
     }
   });
 
-  router.delete("/clients/:ClientId", async (req:Request,res:Response) => {
+  router.delete("/suppliers/:SupplierId", async (req:Request,res:Response) => {
     try {
-      const id=req.params.ClientId
-      const result = await service.removeClient(id)
+      const id=req.params.SupplierId
+      const result = await service.removeSupplier(id)
       res.status(200).send(result);
     } catch (err) {
       console.log(err);
@@ -43,9 +44,9 @@ export const ClientRouter = (
     }
   });
 
-  router.put("/clients/:ClientId", async (req:Request,res:Response) => {
+  router.put("/suppliers/:SupplierId", async (req:Request,res:Response) => {
     try {
-      const result = await service.editArticle(req,res)
+      const result = await service.editSupplier(req,res)
       res.status(200).send(result);
     } catch (err) {
       console.log(err);
