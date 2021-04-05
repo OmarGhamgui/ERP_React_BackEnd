@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6064449362ca3612381a2a27"
+  },
+  "name": "Mohamed Ali",
+  "phone": 22469832,
+  "address": "Sfax, Tunisie",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606444a462ca3612381a2a28"
+  },
+  "name": "Rami",
+  "phone": 50988254,
+  "address": "Sfax, Tunisie",
+  "__v": 0
+}]

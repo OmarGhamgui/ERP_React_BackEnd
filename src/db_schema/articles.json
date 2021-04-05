@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "6046194d6ad5a1267cbb4c07"
+  },
+  "name": "SalonUpdated",
+  "ref": "lkajelakzjealzk",
+  "price": 2000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "604619616ad5a1267cbb4c08"
+  },
+  "name": "Salon2",
+  "ref": "amlekaze5",
+  "price": 16,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "604643b412a1aa2f60d0cb45"
+  },
+  "name": "Salon3",
+  "ref": "lkjelakje",
+  "price": 3000,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "604643bc12a1aa2f60d0cb46"
+  },
+  "name": "Salon4",
+  "ref": "lkjelakzeje",
+  "price": 3500,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "605dfdcb6c63f3377ceb3223"
+  },
+  "name": "bleu1",
+  "ref": "565646546",
+  "category": "salon",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606198a37248fb3b60a8fbea"
+  },
+  "name": "bleu5",
+  "ref": "lkjlakejazlkje",
+  "category": "aejalkejazlke",
+  "__v": 0
+}]
