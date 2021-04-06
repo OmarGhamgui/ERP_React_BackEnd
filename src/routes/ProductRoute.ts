@@ -10,7 +10,7 @@ export const ProductRouter = (
         const result = await service.createProduct({
           name: req.body.name,
           ref: req.body.ref,
-          articles: req.body.articles,
+          usedArticles: req.body.usedArticles,
         });
         res.status(200).send(result);
       } catch (err) {
