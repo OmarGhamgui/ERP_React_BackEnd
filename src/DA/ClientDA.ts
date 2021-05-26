@@ -31,6 +31,7 @@ export class ClientDA {
       console.log("error on find", error.message);
     }
   }
+
   public async removeClient(id: any) {
     try {
       return Client.findByIdAndDelete(id);
@@ -39,21 +40,20 @@ export class ClientDA {
     }
   }
 
-  public async editClient(req: any, res: any) {
-    const id = req.params.ClientId;
-    const { name, phone, address } = req.body;
+  public async editClient(data:any) {
     try {
-      let client = await Client.findById(id);
+      const {name,phone,address} = data
+      let client = await Client.findById(data._id);
       if (!client) {
-        return res.status(400).json({ error: "client not found" });
+     return "client not found"
       }
       let newClient = {
-        name,
-        phone,
-        address,
+      name,
+      phone,
+      address,
       };
       return await Client.findByIdAndUpdate(
-        { _id: id },
+        { _id: data._id },
         {
           $set: {
             ...newClient,

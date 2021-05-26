@@ -2,6 +2,7 @@ import { ClientDA } from './../DA/ClientDA';
 
 export class ClientController {
     constructor(private clientDA: ClientDA) { }
+
     public async createClient(data: any) {
         try {
             const result = await this.clientDA.createClient(data);
@@ -21,7 +22,7 @@ export class ClientController {
             throw err;
         }
     }
-
+    
     public async removeClient(id:any) {
         try {
             const result = await this.clientDA.removeClient(id);
@@ -32,9 +33,9 @@ export class ClientController {
         }
     }
 
-    public async editArticle(req:any,res:any) {
+    public async editClient(data:any) {
         try {
-            const result = await this.clientDA.editClient(req,res);
+            const result = await this.clientDA.editClient(data);
                         return result;
         }
         catch (err) {

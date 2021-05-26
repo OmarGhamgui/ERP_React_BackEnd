@@ -6,12 +6,12 @@ export class ProductDA {
     public async createProduct({
       name,
       ref,
-      articles,
+      usedArticles,
     }: CreateQuery<IProduct>): Promise<IProduct> {
       return Product.create({
         name,
         ref,
-        articles,
+        usedArticles,
       })
         .then((data: IProduct) => {
           console.log(data);
